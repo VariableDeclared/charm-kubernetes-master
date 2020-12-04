@@ -2776,8 +2776,12 @@ def _write_vsphere_snap_config(component):
         'default-datastore = "{}"'.format(vsphere.datastore),
         'folder = "{}"'.format(vsphere.folder),
         'resourcepool-path = "{}"'.format(vsphere.respool_path),
+        '[Labels]',
+        'region = {}'.format(vsphere.vsphere_region_tag),
+        'zone = {}'.format(vsphere.vsphere_zone_tag),
         '[Disk]',
         'scsicontrollertype = "pvscsi"',
+
     ]))
 
 
